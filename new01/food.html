@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cmn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+      <style>
+    body, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+        ul {
+			list-style: none;
+        } 
+        img {
+			display: block;
+        }    
+        /* 将照片之间的间隔去掉 */
+        .view-food
+        {
+            width: 680px;
+            /* 框的宽 */
+            height: 320px;
+            /* 高 */
+            padding: 5px;
+            /* 内边距 */
+            margin: 100px auto;
+            /* 外边距，且居中 */
+            border: 1px solid #CCC; 
+            /* 框线 */
+            background-color: #F2F2F2;
+            /* 框的背景颜色 */
+            border-radius: 5px;
+        }
+        .view-food ul{
+            width: 100%;
+			height: 100%;
+			position: relative;
+            overflow: hidden;
+            /* 将照片限制在框里 */
+        }
+        .view-food li {
+			position: absolute;
+            top: 500px;
+            /* 照片在框里消失，或者没有在框里显示 */
+        }
+        .view-food li:first-child {
+            top: 0;
+            /* 显示第一张照片，或是匹配li父类的第一个元素，就是第一个元素的top为0 */
+        }
+		.view-food li:nth-child(1) {
+			animation: cycle 40s linear infinite;
+		}
+
+		.view-food li:nth-child(2) {
+			animation: cycletwo 40s linear infinite;
+		}
+
+		.view-food li:nth-child(3) {
+			animation: cyclethree 40s linear infinite;
+		}
+
+		.view-food li:nth-child(4) {
+			animation: cyclefour 40s linear infinite;
+		}
+
+		.view-food li:nth-child(5) {
+			animation: cyclefive 40s linear infinite;
+		}
+
+		@keyframes cycle {
+			0%  {top: 0px;}
+			4%  {top: 0px;}
+			16% {top: 0px; opacity: 1; z-index: 0;} 
+			20% {top: 325px; opacity: 0; z-index: 0;}
+			21% {top: -325px; opacity: 0; z-index: -1;}
+			50% {top: -325px; opacity: 0; z-index: -1;}
+			92% {top: -325px; opacity: 0; z-index: 0;}
+			96% {top: -325px; opacity: 0;}
+			100%{top: 0px; opacity: 1;}
+		}
+
+		@keyframes cycletwo {
+			0%  {top: -325px; opacity: 0;}
+			16% {top: -325px; opacity: 0;}
+			20% {top: 0px; opacity: 1;}
+			24% {top: 0px; opacity: 1;} 
+			36% {top: 0px; opacity: 1; z-index: 0;} 
+			40% {top: 325px; opacity: 0; z-index: 0;}
+			41% {top: -325px; opacity: 0; z-index: -1;}  
+			100%{top: -325px; opacity: 0; z-index: -1;}
+		}
+
+		@keyframes cyclethree {
+			0%  {top: -325px; opacity: 0;}
+			36% {top: -325px; opacity: 0;}
+			40% {top: 0px; opacity: 1;}
+			44% {top: 0px; opacity: 1;} 
+			56% {top: 0px; opacity: 1; z-index: 0;} 
+			60% {top: 325px; opacity: 0; z-index: 0;} 
+			61% {top: -325px; opacity: 0; z-index: -1;}
+			100%{top: -325px; opacity: 0; z-index: -1;}
+		}
+
+		@keyframes cyclefour {
+			0%  {top: -325px; opacity: 0;}
+			56% {top: -325px; opacity: 0;}
+			60% {top: 0px; opacity: 1;}
+			64% {top: 0px; opacity: 1;}
+			76% {top: 0px; opacity: 1; z-index: 0;}
+			80% {top: 325px; opacity: 0; z-index: 0;}
+			81% {top: -325px; opacity: 0; z-index: -1;}
+			100%{top: -325px; opacity: 0; z-index: -1;}
+		}
+
+		@keyframes cyclefive {
+			0%  { top:-325px; opacity:0; }
+			76% { top:-325px; opacity:0; }
+			80% { top:0px; opacity:1; }
+			84% { top:0px; opacity:1; }
+			96% { top:0px; opacity:1; z-index:0; }
+			100%{ top:325px; opacity:0; z-index:0; }
+		}
+
+    </style>
+</head>
+<body>
+    <div class="view-food" >
+        <ul>
+            <li><img src="con2.jpg" alt=""width="678px" height="318px" ></li>
+            <li><img src="con3.jpg" alt=""width="678px" height="318px"></li>
+            <li><img src="con4.jpg" alt=""width="678px" height="318px"></li>
+            <li><img src="con5.jpg" alt=""width="678px" height="318px"></li>
+            <li><img src="con6.jpg" alt=""width="678px" height="318px"></li>
+        </ul>
+    </div>
+</body>
+</html>
