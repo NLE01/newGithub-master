@@ -172,7 +172,7 @@ class ShoppingCart {
         let order=this.find(id,orderList);
         //定位要删除的订单在数组中
         let index=orderList.indexOf(order,0);
-        if(index==null){
+        if(index==-1){
             //没有找到id
             console.log('id订单有误！');
         }
@@ -180,12 +180,19 @@ class ShoppingCart {
             //删除当前订单
             orderList.splice(index,1);
             //变更总商品总件数
-            cartData.totalQty-=order.price;
-            //变更总商品总件数
+            cartData.totalQty-=order.qty;
+            //变更总商品总价格
+            cartData.totalAmount-=order.price;
+            //变更总商品件数
+            cartData.units--;
+            // 数据回写购物车
+            this.setDataToLocalSatorge(cartData);
             
         }
         
         
 
     }
+    // 将数据显示到样本节点
+
 }
