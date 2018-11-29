@@ -193,6 +193,5 @@ class ShoppingCart {
         
 
     }
-    // 将数据显示到样本节点
 
 }
