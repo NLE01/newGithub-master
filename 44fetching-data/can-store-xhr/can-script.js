@@ -55,11 +55,11 @@ function initialize() {
   function selectCategory(e) {
     // Use preventDefault() to stop the form submitting — that would ruin
     // the experience
-    e.preventDefault();
+    e.preventDefault();//阻止默认值
 
     // Set these back to empty arrays, to clear out the previous search
-    categoryGroup = [];
-    finalGroup = [];
+    categoryGroup = [];//分类数组
+    finalGroup = [];//最终数组
 
     // if the category and search term are the same as they were the last time a
     // search was run, the results will be the same, so there is no point running
